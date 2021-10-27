@@ -1,4 +1,15 @@
 <div class="test">
     <h3>This is the Component Home </h3>
-    
+    <p>Xin Chào {{name}}</p>
+    <input type="text" [(ngModel)]="name"/>
+    <button (click)="resestName()">Resest Tên</button>
+
+
+    <!-- ------------------------------------------------------- -->
+    <!-- <h2 *ngIf="age<=20">Bạn Còn Trẻ Lắm</h2>
+    <h2 *ngIf="age>20">Bạn Già Thế</h2> -->
+
+    <!-- ----------------------------------------------------------- -->
+    <!-- <input [value]="name" /><br />
+    <input value="{{name}}" type="text" [title]="'this is ' + name" /> -->
 </div>
