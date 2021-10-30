@@ -1,15 +1,24 @@
 <div class="test">
     <h3>This is the Component Home </h3>
-    
-    <input type="text" [(ngModel)]="age" />
-    <p>Xin Chào {{age}}</p>
-    <button (click)="resetName()">Resest Tuổi</button>
+    <div *ngFor="let item of fruits;let i = index" >
+        <li>{{i+1}}. {{item}}</li>
+    </div>
 
 
     <!-- ------------------------------------------------------- -->
-    <div *ngIf="age<=20;then young;else old"></div>
-<ng-template #young><h2>Bạn Còn Trẻ Lắm</h2></ng-template>    
-<ng-template #old><h2 *ngIf="age>20">Bạn Già Thế</h2></ng-template>   
+    <!-- <input type="text" [(ngModel)]="age" />
+    <p>Xin Chào {{age}}</p>
+    <button (click)="resetName()">Resest Tuổi</button> -->
+
+
+    <!-- ------------------------------------------------------- -->
+    <!-- <div *ngIf="age<=20;then young;else old"></div>
+    <ng-template #young>
+        <h2>Bạn Còn Trẻ Lắm</h2>
+    </ng-template>
+    <ng-template #old>
+        <h2 *ngIf="age>20">Bạn Già Thế</h2>
+    </ng-template> -->
 
     <!-- ----------------------------------------------------------- -->
     <!-- <input [value]="name" /><br />
