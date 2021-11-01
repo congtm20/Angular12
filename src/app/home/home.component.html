@@ -1,18 +1,41 @@
 <div class="test">
     <h3>This is the Component Home </h3>
-    <div *ngFor="let item of fruits;let i = index" >
+    <div *ngFor="let item of fruits;let i = index">
         <li>{{i+1}}. {{item}}</li>
     </div>
+    <br />
+    <div>
+        <table style="width:50%">
+            <tr>
 
+                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Discount</th>
+            </tr>
+            <tr *ngFor="let item of fruits2;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{item.fName}}</td>
+                <td style="text-align:right">
+                    <span [ngClass] ="{'negative': item.fPrice<0}"> {{item.fPrice}}$</span>
+                </td>
+                <td>
+                    <span *ngIf="item.Discount==true">SALE!!!</span>
+                </td>
+            </tr>
 
-    <!-- ------------------------------------------------------- -->
-    <!-- <input type="text" [(ngModel)]="age" />
+        </table>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------- -->
+<!-- <input type="text" [(ngModel)]="age" />
     <p>Xin Chào {{age}}</p>
     <button (click)="resetName()">Resest Tuổi</button> -->
 
 
-    <!-- ------------------------------------------------------- -->
-    <!-- <div *ngIf="age<=20;then young;else old"></div>
+<!-- ------------------------------------------------------- -->
+<!-- <div *ngIf="age<=20;then young;else old"></div>
     <ng-template #young>
         <h2>Bạn Còn Trẻ Lắm</h2>
     </ng-template>
@@ -20,7 +43,6 @@
         <h2 *ngIf="age>20">Bạn Già Thế</h2>
     </ng-template> -->
 
-    <!-- ----------------------------------------------------------- -->
-    <!-- <input [value]="name" /><br />
+<!-- ----------------------------------------------------------- -->
+<!-- <input [value]="name" /><br />
     <input value="{{name}}" type="text" [title]="'this is ' + name" /> -->
-</div>
