@@ -10,10 +10,10 @@ export class HomeComponent implements OnInit {
   public age: number = 18;
   public fruits = ['Apple', 'Orange', 'Melon', 'Strawberry', 'Mango', 'Cherry'];
   public fruits2 = [
-    { fName: 'Apple', fPrice: -1 , Discount: false },
-    { fName: 'Orange', fPrice: 20, Discount: false },
-    { fName: 'Melon', fPrice: 15, Discount: false },
-    { fName: 'Strawberry', fPrice: 30, Discount: true},
+    { fName: 'Apple', fPrice: -1 , Discount: 0 },
+    { fName: 'Orange', fPrice: 20, Discount: 20 },
+    { fName: 'Melon', fPrice: 15, Discount: 15 },
+    { fName: 'Strawberry', fPrice: 30, Discount: 50},
   ];
   constructor() {}
 

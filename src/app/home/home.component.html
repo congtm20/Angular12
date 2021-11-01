@@ -15,12 +15,12 @@
             </tr>
             <tr *ngFor="let item of fruits2;let i = index">
                 <td>{{i+1}}</td>
-                <td>{{item.fName}}</td>
+                <td>{{item.fName | lowercase}}</td> 
                 <td style="text-align:right">
-                    <span [ngClass] ="{'negative': item.fPrice<0}"> {{item.fPrice}}$</span>
+                    <span [ngClass] ="{'negative': item.fPrice<0}"> {{item.fPrice | currency:"USD"}}</span>
                 </td>
                 <td>
-                    <span *ngIf="item.Discount==true">SALE!!!</span>
+                    <span>{{item.Discount*item.fPrice/100 | onSale}}</span>
                 </td>
             </tr>
 
