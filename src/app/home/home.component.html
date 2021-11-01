@@ -4,7 +4,22 @@
         <li>{{i+1}}. {{item}}</li>
     </div>
     <br />
+
     <div>
+        <select id="city" (change)="changeCity($event)">
+            <option *ngFor="let item of provinces">{{item.province}}</option>
+        </select>
+    </div>
+    <div>
+        <select>
+            <option *ngFor="let item of cities">{{item}}</option>
+        </select>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------- -->
+
+<!-- <div>
         <table style="width:50%">
             <tr>
 
@@ -25,9 +40,7 @@
             </tr>
 
         </table>
-    </div>
-</div>
-
+    </div> -->
 <!-- ------------------------------------------------------- -->
 <!-- <input type="text" [(ngModel)]="age" />
     <p>Xin Chào {{age}}</p>
