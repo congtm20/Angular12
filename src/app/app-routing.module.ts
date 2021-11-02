@@ -3,10 +3,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DrivenFormComponent } from './driven-form/driven-form.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'driven-form', component: DrivenFormComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];

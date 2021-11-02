@@ -9,8 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { OnSalePipe } from './Pipes/on-sale.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HighlightDirective } from './Directives/highlight.directive';
+import { DrivenFormComponent } from './driven-form/driven-form.component';
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, OnSalePipe, PageNotFoundComponent, HighlightDirective],
+  declarations: [AppComponent, HomeComponent, AboutComponent, OnSalePipe, PageNotFoundComponent, HighlightDirective, DrivenFormComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
